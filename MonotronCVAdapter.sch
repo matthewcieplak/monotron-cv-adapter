@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV1
+U 1 1 5D1B1A01
+P 5550 3750
+F 0 "RV1" V 5435 3750 50  0000 C CNN
+F 1 "B100K" V 5344 3750 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Omeg_PC16PU_Horizontal" H 5550 3750 50  0001 C CNN
+F 3 "~" H 5550 3750 50  0001 C CNN
+	1    5550 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D1B2209
+P 4675 3750
+F 0 "R1" V 4468 3750 50  0000 C CNN
+F 1 "2k" V 4559 3750 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4605 3750 50  0001 C CNN
+F 3 "~" H 4675 3750 50  0001 C CNN
+	1    4675 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D1B29E7
+P 4675 4275
+F 0 "R2" V 4468 4275 50  0000 C CNN
+F 1 "2k" V 4559 4275 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4605 4275 50  0001 C CNN
+F 3 "~" H 4675 4275 50  0001 C CNN
+	1    4675 4275
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5D1B3D07
+P 4750 3225
+F 0 "#PWR01" H 4750 2975 50  0001 C CNN
+F 1 "GND" H 4755 3052 50  0000 C CNN
+F 2 "" H 4750 3225 50  0001 C CNN
+F 3 "" H 4750 3225 50  0001 C CNN
+	1    4750 3225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3225 4500 3225
+Wire Wire Line
+	4425 3225 4425 3650
+Wire Wire Line
+	4425 3750 4525 3750
+$Comp
+L Transistor_BJT:BC557 Q1
+U 1 1 5D1B6422
+P 5100 4275
+F 0 "Q1" H 5291 4321 50  0000 L CNN
+F 1 "BC557" H 5291 4230 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 5300 4200 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 5100 4275 50  0001 L CNN
+	1    5100 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D1B6D4F
+P 5200 4675
+F 0 "#PWR02" H 5200 4425 50  0001 C CNN
+F 1 "GND" H 5205 4502 50  0000 C CNN
+F 2 "" H 5200 4675 50  0001 C CNN
+F 3 "" H 5200 4675 50  0001 C CNN
+	1    5200 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3500 5550 3500
+Wire Wire Line
+	5550 3500 5550 3600
+Wire Wire Line
+	4425 4275 4525 4275
+Wire Wire Line
+	4425 4175 4500 4175
+Wire Wire Line
+	4500 4175 4500 3225
+Connection ~ 4500 3225
+Wire Wire Line
+	4500 3225 4425 3225
+Wire Wire Line
+	5700 3750 5750 3750
+Wire Wire Line
+	5200 3500 5200 4075
+$Comp
+L Device:C C1
+U 1 1 5D1B9EC0
+P 4875 4425
+F 0 "C1" H 4675 4425 50  0000 L CNN
+F 1 "100nF" H 4625 4325 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 4913 4275 50  0001 C CNN
+F 3 "~" H 4875 4425 50  0001 C CNN
+	1    4875 4425
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 4575
+Wire Wire Line
+	5200 4575 5200 4675
+$Comp
+L Connector:Conn_01x04_Female J1
+U 1 1 5D1BC1E3
+P 6400 3325
+F 0 "J1" H 6428 3301 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 6428 3210 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6400 3325 50  0001 C CNN
+F 3 "~" H 6400 3325 50  0001 C CNN
+	1    6400 3325
+	1    0    0    -1  
+$EndComp
+Connection ~ 4750 3225
+Connection ~ 5550 3500
+Wire Wire Line
+	6200 3425 5550 3425
+Wire Wire Line
+	5550 3425 5550 3500
+Wire Wire Line
+	4750 3225 6200 3225
+NoConn ~ 6200 3325
+NoConn ~ 6200 3525
+Wire Wire Line
+	5200 4575 5750 4575
+Wire Wire Line
+	5750 3750 5750 4575
+Wire Wire Line
+	5200 4475 5200 4575
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5D1C7442
+P 4225 3650
+F 0 "J2" H 4333 3831 50  0000 C CNN
+F 1 "Pitch" H 4333 3740 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4225 3650 50  0001 C CNN
+F 3 "~" H 4225 3650 50  0001 C CNN
+	1    4225 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5D1C7BDE
+P 4225 4175
+F 0 "J3" H 4333 4356 50  0000 C CNN
+F 1 "Gate" H 4333 4265 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4225 4175 50  0001 C CNN
+F 3 "~" H 4225 4175 50  0001 C CNN
+	1    4225 4175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4875 4275 4900 4275
+Wire Wire Line
+	4875 4275 4825 4275
+Connection ~ 4875 4275
+Wire Wire Line
+	4875 4575 5200 4575
+Wire Wire Line
+	4825 3750 5400 3750
+$EndSCHEMATC
