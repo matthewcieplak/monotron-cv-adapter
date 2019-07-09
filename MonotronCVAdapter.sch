@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:MonotronCVAdapter-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -120,8 +121,8 @@ $Comp
 L Connector:Conn_01x04_Female J1
 U 1 1 5D1BC1E3
 P 6400 3325
-F 0 "J1" H 6428 3301 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 6428 3210 50  0000 L CNN
+F 0 "J1" H 6275 3550 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 6150 3025 50  0000 L CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6400 3325 50  0001 C CNN
 F 3 "~" H 6400 3325 50  0001 C CNN
 	1    6400 3325
@@ -174,4 +175,16 @@ Wire Wire Line
 	4875 4575 5200 4575
 Wire Wire Line
 	4825 3750 5400 3750
+Text Notes 4050 3825 0    50   ~ 0
+Tip
+Text Notes 4025 3675 0    50   ~ 0
+Ring
+Text Notes 4025 4325 0    50   ~ 0
+Tip
+Text Notes 4000 4200 0    50   ~ 0
+Ring
+Text Notes 6425 3250 0    50   ~ 0
+MONOTRON GND
+Text Notes 6425 3450 0    50   ~ 0
+TO MONOTRON "GATE"
 $EndSCHEMATC
